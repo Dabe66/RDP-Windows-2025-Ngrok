@@ -42,4 +42,4 @@ jobs:
       run: Reg ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 0 /f
 
     - name: Create Tunnel
-      run: .\ngrok\ngrok.exe tcp 3389
+      run: .\ngrok\ngrok.exe http 80 --url https://default.internal
